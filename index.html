@@ -6,27 +6,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,900;1,400&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <main class="grid">
-        <div class="box left-block">
-            <h1>LEFT BLOCK</h1>
-        </div>
-        <div class="box rigth-block-up">
-            <h1>RIGHT BLOCK - UP</h1>
-        </div>
-        <div class="box rigth-block-middle">
-            <h1>RIGHT BLOCK - MIDDLE</h1>
-        </div>
-        <div class="box rigth-block-down">
-            <h1>RIGHT BLOCK - DOWN</h1>
-        </div>
-        <div class="box overlap">
-            <h1>OVERLAP</h1>
-        </div>
+        <section class="box left-block">
+            <div class="image-container">
+                <img src="/assets/logo-2x.png" srcset="/assets/logo.png 1x, /assets/logo-2x.png 2x"
+                    alt="logo of our company: vietnam canyon in the jungle">
+            </div>
+            <div class="overlap">
+                <p class="green bold">2 Days</p>
+                <hr id="orange-line"><br>
+                <p class="smaller">$166 per person</p>
+            </div>
+        </section>
+        <section class="box rigth-block-up">
+            <h1 class="bold">Mekong</h1>
+            <h1 class="bold">Delta</h1>
+            <h1 class="bold">Tour, &nbsp;&nbsp;&nbsp;<span class="green">Vietnam</span></h1>
+        </section>
+        <section class="box rigth-block-middle">
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore
+                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo</p>
+            </div>
+            <button id="button-book">Book Now</button>
+            <div>
+                <img id="repeat-grid" src="/assets/Repeat Grid 11.svg">
+            </div>
+        </section>
+        <section class="box rigth-block-down">
+            <div class="nxt-button"><img src="/assets/Arrow.svg"></img></div>
+            <div class="nxt-button-text">See more photos</div>
+            <div class="gallery-container">
+                <div class="gallery-image">
+                    <img src="/assets/Vietnam-0.png" srcset="/assets/Vietnam-0.png 1x, /assets/Vietnam-0-2x.png 2x"
+                        alt="Vietnam mountains with path">
+                </div>
+                <div class="gallery-image">
+                    <img src="/assets/Vietnam-1.png" srcset="/assets/Vietnam-1.png 1x, /assets/Vietnam-1-2x.png 2x"
+                        alt="Vietnam girl in the boat on river">
+                </div>
+                <div class="gallery-image">
+                    <img src="/assets/Vietnam-2.png" srcset="/assets/Vietnam-2.png 1x, /assets/Vietnam-2-2x.png 2x"
+                        alt="Vietnam mountains">
+                </div>
+            </div>
+        </section>
     </main>
+    <script src="/script/script.js"></script>
 </body>
 
 </html>
