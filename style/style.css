@@ -149,14 +149,15 @@ p {
     padding-right: 10px;
     padding-top: 21px;
     padding-bottom: 39px;
+    width: 90%;
 }
 
 .text p {
     word-wrap: break-word;
     overflow-wrap: break-word;
     color: #7D7D7D;
-    font-size: 28px;
-    line-height: 54px;
+    font-size: 22px;
+    line-height: 32px;
     letter-spacing: 0px;
 }
 
@@ -269,6 +270,11 @@ button span:nth-child(4) {
     .rigth-block-middle {
         margin: 0;
         max-width: 430px;
+    }
+
+    .text p {
+        font-size: 28px;
+        line-height: 54px;
     }
 
     .image-container img {
