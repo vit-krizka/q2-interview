@@ -53,6 +53,26 @@ p {
     margin-left: 10px;
 }
 
+.trip-button {
+    display: none;
+}
+
+.trip-button-text {
+    display: none;
+}
+
+.facebook-button {
+    display: none;
+}
+
+.twitter-button {
+    display: none;
+}
+
+.aether-button {
+    display: none;
+}
+
 /* LEFT BLOCK - OVERLAP BOX */
 
 .overlap {
@@ -242,6 +262,83 @@ p {
         color: #0D9206;
         font-size: 26px;
         cursor: pointer;
+    }
+
+    .trip-button {
+        display: block;
+        position: absolute;
+        bottom: 87px;
+        left: 35px;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 5px 14px 15px #0000002E;
+        opacity: 0.79;
+    }
+
+    .trip-button-text {
+        display: block;
+        width: 232px;
+        height: 60px;
+        position: absolute;
+        bottom: 87px;
+        left: 87px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #789376;
+        font-size: 26px;
+        cursor: pointer;
+    }
+
+    .facebook-button {
+        display: block;
+        position: absolute;
+        top: 247px;
+        left: 35px;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        border: 1px solid #0D9206;
+        border-radius: 50%;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .twitter-button {
+        display: block;
+        position: absolute;
+        top: 337px;
+        left: 35px;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        border: 1px solid #0D9206;
+        border-radius: 50%;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .faether-button {
+        display: block;
+        position: absolute;
+        top: 453px;
+        left: 35px;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        border: 1px solid #0D9206;
+        border-radius: 50%;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .gallery-container {
