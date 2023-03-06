@@ -160,15 +160,67 @@ p {
 #button-book {
     width: 203px;
     height: 61px;
-    background: #FF8800 0% 0% no-repeat padding-box;
+    background-color: #FF8800;
     color: white;
     font-size: 27px;
     border: none;
     cursor: pointer;
 }
 
-#button-book img {
-    padding: 0;
+#button-book {
+    --c: #0D9206;
+    color: var(--c);
+    border: none;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+    width: 203px;
+    height: 61px;
+    background-color: #FF8800;
+    color: white;
+    font-size: 27px;
+    border: none;
+    cursor: pointer;
+}
+
+#button-book span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+#button-book:hover {
+    width: 223px;
+}
+
+#button-book:hover span {
+    transform: translateY(0) scale(2);
+}
+
+#button-book span:nth-child(1) {
+    --n: 1;
+}
+
+#button-book span:nth-child(2) {
+    --n: 2;
+}
+
+#button-book span:nth-child(3) {
+    --n: 3;
+}
+
+button span:nth-child(4) {
+    --n: 4;
 }
 
 #repeat-grid {
