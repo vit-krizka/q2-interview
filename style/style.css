@@ -26,6 +26,10 @@ body {
     color: #0D9206;
 }
 
+h1 {
+    display: inline-block;
+}
+
 h1,
 p {
     font-family: 'Source Sans Pro', sans-serif;
@@ -36,7 +40,6 @@ p {
 
 .left-block {
     grid-area: left-block;
-    position: relative;
     min-width: 50vw;
 }
 
@@ -69,7 +72,7 @@ p {
     display: none;
 }
 
-.aether-button {
+.sites-button {
     display: none;
 }
 
@@ -126,8 +129,8 @@ p {
     text-shadow: 0px 16px 21px #00000029;
     padding: 0;
     margin: 0;
-    font-size: 90px;
-    line-height: 105px;
+    font-size: 70px;
+    line-height: 85px;
     letter-spacing: 0px;
 }
 
@@ -195,7 +198,7 @@ p {
     border-radius: 50%;
     left: calc((var(--n) - 1) * 25%);
     transition: 0.5s;
-    transition-delay: calc((var(--n) - 1) * 0.1s);
+    transition-delay: calc((var(--n) - 1) * 0.15s);
     z-index: -1;
 }
 
@@ -231,13 +234,9 @@ button span:nth-child(4) {
 
 .rigth-block-down {
     grid-area: right-block-down;
-    position: relative;
+    /* position: relative; */
     padding: 68px 0px 61px 0px;
     margin: auto;
-}
-
-.gallery-container {
-    overflow: hidden;
 }
 
 .gallery-image {
@@ -245,6 +244,7 @@ button span:nth-child(4) {
     height: auto;
     display: block;
     float: center;
+    margin: auto;
 }
 
 .nxt-button {
@@ -286,8 +286,8 @@ button span:nth-child(4) {
     .nxt-button {
         display: block;
         position: absolute;
-        bottom: 87px;
-        left: 799px;
+        bottom: 0px;
+        right: 50px;
         cursor: pointer;
         width: 60px;
         height: 60px;
@@ -299,12 +299,12 @@ button span:nth-child(4) {
 
     .nxt-button-text {
         display: block;
+        position: absolute;
+        bottom: 0px;
+        right: 121px;
         width: 232px;
         height: 60px;
-        position: absolute;
-        bottom: 87px;
-        left: 556px;
-        background: #FFFFFF 0% 0% no-repeat padding-box;
+        background-color: #FFFFFF;
         box-shadow: 5px 0px 7px #00000087;
         opacity: 0.79;
         border-radius: 30px / 30px;
@@ -319,7 +319,7 @@ button span:nth-child(4) {
     .trip-button {
         display: block;
         position: absolute;
-        bottom: 87px;
+        bottom: 0px;
         left: 35px;
         cursor: pointer;
         width: 60px;
@@ -335,7 +335,7 @@ button span:nth-child(4) {
         width: 232px;
         height: 60px;
         position: absolute;
-        bottom: 87px;
+        bottom: 0px;
         left: 87px;
         display: flex;
         justify-content: center;
@@ -355,7 +355,7 @@ button span:nth-child(4) {
         height: 60px;
         border: 1px solid #0D9206;
         border-radius: 50%;
-        background: #FFFFFF 0% 0% no-repeat padding-box;
+        background: #FFFFFF;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -377,7 +377,7 @@ button span:nth-child(4) {
         align-items: center;
     }
 
-    .faether-button {
+    .sites-button {
         display: block;
         position: absolute;
         top: 453px;
@@ -395,17 +395,23 @@ button span:nth-child(4) {
 
     .gallery-container {
         display: flex;
-        overflow-x: scroll;
-        scroll-behavior: smooth;
+        overflow: hidden;
+        width: 100%;
     }
 
     .gallery-image {
         flex: 0 0 auto;
+        margin: 0;
         margin-right: 10px;
     }
 }
 
 @media (min-width: 1400px) {
+    .rigth-block-up h1 {
+        font-size: 90px;
+        line-height: 105px;
+    }
+
     .rigth-block-middle {
         margin: 0;
         max-width: 665px;
@@ -416,5 +422,47 @@ button span:nth-child(4) {
         position: absolute;
         right: -207px;
         bottom: 100px;
+    }
+}
+
+.image-container img {
+    transform: rotate(-360deg) scale(0.1);
+    animation: reveal 0.5s forwards;
+}
+
+.overlap {
+    transform: rotate(360deg) scale(0.1);
+    animation: reveal 1s forwards;
+}
+
+@keyframes reveal {
+    to {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+.shake {
+    animation: shake 0.2s linear 5;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(5px, 5px);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    75% {
+        transform: translate(-5px, -5px);
+    }
+
+    100% {
+        transform: translate(0, 0);
     }
 }
